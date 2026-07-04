@@ -1,3 +1,4 @@
+#v1
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,7 +24,7 @@ spec:
     spec:
       containers:
         - name:  devopslab9situ-server
-          image: devopslab9situ:latest 
+          image: devopslab9situ:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
