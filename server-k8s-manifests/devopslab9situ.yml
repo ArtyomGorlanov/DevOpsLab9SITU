@@ -19,8 +19,6 @@ spec:
       labels:
         app: devopslab9situ
         svc: frontend
-        release-date: 1783208874
-
     spec:
       containers:
         - name:  devopslab9situ-server
