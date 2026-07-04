@@ -32,11 +32,11 @@ jobs:
 
   touch-k8s-manifest:
     name: Update K8s manifest with release date
-    needs: [push_to_registry]
+    needs: push_to_registry
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Checkout repo
+      - name: Check out repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -49,7 +49,7 @@ jobs:
         run: |
           git config --global user.name "Release Runner"
           git config --global user.email "runner@users.noreply.github.com"
-          git checkout master
+          git checkout main
           git add ./server-k8s-manifests/devopslab9situ.yml
           git commit -m "Release $(date +%s)" || echo "No changes to commit"
-          git push origin master:release
+          git push origin main:release
