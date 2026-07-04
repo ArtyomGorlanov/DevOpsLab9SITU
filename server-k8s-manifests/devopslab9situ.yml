@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name:  devopslab9situ-server
-          image: devopslab9situ:latest
+          image: artyomgorlanov/devopslab9situ:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
