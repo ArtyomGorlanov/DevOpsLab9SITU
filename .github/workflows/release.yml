@@ -1,5 +1,5 @@
 name: Publish Docker image
-#FD
+#V1.4
 on:
   push:
     branches: [ main ]
