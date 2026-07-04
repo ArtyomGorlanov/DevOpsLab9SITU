@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopslab9situ
+  labels:
+    app: devopslab9situ
+    release-date: RELEASE-DATE
+  namespace: devopslab9situ
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopslab9situ
+
+  template:
+    metadata:
+      labels:
+        app: devopslab9situ
+        svc: frontend
+        release-date: RELEASE-DATE
+
+    spec:
+      containers:
+        - name:  devopslab9situ-server
+          image: devopslab9situ:latest 
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-devops
+  labels:
+    app: devopslab9situ
+  namespace: devopslab9situ
+
+spec:
+  type: LoadBalancer
+  selector:
+    app: devopslab9situ
+    svc: frontend
+
+  ports:
+    - port: 12345
+      targetPort: 8000
+
+  externalIPs:
+    - 172.16.10.100
