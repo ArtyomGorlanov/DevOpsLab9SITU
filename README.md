@@ -196,7 +196,7 @@ Developer → GitHub (dev)
 - unit-тесты
 - Docker-контейнеризация
 - CI pipeline (lint/test/build)
-- CD pipeline (Docker Hub push)
+- CD pipeline (Docker Hub push - https://hub.docker.com/repository/docker/artyomgorlanov/devopslab9situ)
 - Kubernetes deployment
 - GitOps-деплой через ArgoCD
 - полноценный CI/CD цикл доставки
