@@ -5,7 +5,6 @@ metadata:
   name: devopslab9situ
   labels:
     app: devopslab9situ
-    release-date: 1783209886
   namespace: devopslab9situ
 
 spec:
