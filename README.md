@@ -2,7 +2,7 @@
 
 ## Описание
 
-Цель лабораторной работы — разработать **cloud-native приложение** и реализовать полный CI/CD цикл доставки в Kubernetes с использованием:
+Цель лабораторной работы - разработать **cloud-native приложение** и реализовать полный CI/CD цикл доставки в Kubernetes с использованием:
 
 - GitHub Actions (CI/CD)
 - Docker
@@ -152,18 +152,6 @@ Service:
 - внешний порт: `12345`
 - targetPort: `8000`
 - externalIP: `172.16.10.100`
-
----
-
-## Проверка работы
-
-Пример ответа сервиса:
-
-```text
-Hello World VERSION 5!
-I have been seen 942 times.
-My name is: devopslab9situ-xxx
-```
 
 ---
 
